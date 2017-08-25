@@ -10,7 +10,16 @@ class ziroomSpider(scrapy.Spider):
 
     def start_requests(self):
         urls = [
-            'http://hz.ziroom.com/z/nl/z3-d330108.html?p=1'
+            # 'http://hz.ziroom.com/z/nl/z3.html',# 不限
+            'http://hz.ziroom.com/z/nl/z3-d330102.html',
+            'http://hz.ziroom.com/z/nl/z3-d330103.html',
+            'http://hz.ziroom.com/z/nl/z3-d23009161.html',
+            'http://hz.ziroom.com/z/nl/z3-d330110.html',
+            'http://hz.ziroom.com/z/nl/z3-d330105.html',
+            'http://hz.ziroom.com/z/nl/z3-d330104.html',
+            'http://hz.ziroom.com/z/nl/z3-d330108.html',
+            'http://hz.ziroom.com/z/nl/z3-d330109.html',
+            'http://hz.ziroom.com/z/nl/z3-d330106.html'
         ]
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)
